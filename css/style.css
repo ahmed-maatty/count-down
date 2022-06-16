@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Cairo', sans-serif;
+    text-transform: capitalize;
+}
+
+:root {
+    --MainColor: #2196f3 ;
+    --BackgroundColor: #ececec ;
+    --SecondColor: #1787e0 ;
+}
+
+.container{
+    width: 75%;
+    margin: 0 auto;
+}
+
+
+.title{
+    padding: 10px;
+    margin: 50px auto;
+    text-align: center;
+    width: 230px;
+    border: solid 4px;
+    transition: 0.3s;
+}
+
+.title:hover {
+    background-color: #1787e0;
+    color: #ececec;
+}
+
+.mainDiv {
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-pic {
+    width: 35%;
+    margin-left: 15px;
+}
+
+.main-pic img {
+    width: 100%;
+}
+
+.CountDown {
+    display: flex;
+    justify-content: space-between;
+    width: 650px;
+    flex-wrap: wrap;
+    float: right;
+}
+
+.CountDown .CountCon {
+    border: 1px solid #777;
+    padding: 10px;
+    text-align: center;
+    width: 125px;
+    height: 100px;
+    border-radius: 10px;
+    color: var(--MainColor);
+    font-size: 25px;
+    font-weight: bold;
+}
+.CountDown .CountCon span{
+    display: inline-block;
+    font-size: 20px;
+    width: inherit;
+    text-align: center;
+    border-top: solid 3px var(--SecondColor);
+    width: 80px;
+}
+
+.desc {
+    line-height: 3;
+    direction: rtl;
+    margin: 23px;
+    font-size: 16px;
+    padding: 10px;
+}
+
+.stpic,.ndpic {
+    position: absolute;
+    width: 170px;
+}
+
+.stpic {
+    top: 55px;
+    left: 25px;
+}
+
+.ndpic {
+    bottom: 65px;
+    right: 25px;
+}
+
+.footer {
+    width: 100%;
+    background-color: #f0f0f0;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    padding: 7px 0;
+    text-transform: capitalize;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+@media screen and ( max-width: 540px ) and (max-height: 1200px ) {
+    .stpic,.ndpic {
+        display: none;
+    }
+
+    .main-pic {
+        display: none;
+    }
+
+    .CountDown {
+        flex-direction: column;
+        margin: 0 auto;
+        width: 100%;
+        padding: 20px;
+    }
+
+    .CountCon {
+        margin: 10px auto;
+        flex: 1;
+    }
+
+    .title {
+        margin: 25px auto;
+        width: 150px;
+        font-size: 15px;
+    }
+
+    .desc {
+        line-height: 2;
+        margin: 0;
+    }
+
+    .desc h3 {
+        margin: 10px;
+    }
+
+    .desc h5 {
+        margin: 10px;
+        font-size: 20;
+    }
+
+    .footer {
+        width: 100%;
+        position: inherit;
+    }
+}
